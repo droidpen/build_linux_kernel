@@ -1,5 +1,6 @@
 # build_linux_kernel
 Instructions/scripts on how to make linux kernel from scratch
+Ref: https://phoenixnap.com/kb/build-linux-kernel
 
 ## Step 1: Download the Source Code
 1. Visit the official kernel website and download the latest kernel version. The downloaded file contains a compressed source code.
