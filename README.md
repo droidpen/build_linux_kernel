@@ -57,7 +57,7 @@ The command we used above installs the following packages:
 ![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/73528796-b304-49dd-9c8d-877031747578)
 
 
-##Step 4: Configure Kernel
+## Step 4: Configure Kernel
 The Linux kernel source code comes with the default configuration. However, you can adjust it to your needs. To do so, follow the steps below:
 
 1. Navigate to the linux-6.0.7 directory using the cd command:
@@ -87,7 +87,7 @@ Changing the settings in the navigation menu.
 Note: Changing settings for some options can lead to a non-functional kernel. If you are unsure what to change, leave the default settings.
 
 
-##Step 5: Build the Kernel
+## Step 5: Build the Kernel
 1. Start building the kernel by running the following command:
 ```
 make
@@ -129,7 +129,7 @@ Installing the kernel.
 ![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/7fc200e4-b12a-4127-ac78-dbd7b3ea9ba8)
 
 
-##Step 6: Update the Bootloader (Optional)
+## Step 6: Update the Bootloader (Optional)
 The GRUB bootloader is the first program that runs when the system powers on.
 
 The **make install** command performs this process automatically, but you can also do it manually.
@@ -148,7 +148,7 @@ Updating the grub.
 ![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/9fc0743c-ee83-4725-9529-0f31c29bf101)
 
 
-**Step 7: Reboot and Verify Kernel Version**
+** Step 7: Reboot and Verify Kernel Version**
 When you complete the steps above, reboot the machine.
 
 When the system boots up, verify the kernel version using the [uname](https://phoenixnap.com/kb/uname-linux) command:
@@ -160,7 +160,7 @@ The terminal prints out the current Linux kernel version.
 Verify the current Linux Kernel version.
 ![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/e6011fc3-0dd7-422d-a9a2-9ee40381687e)
 
-##Conclusion
+## Conclusion
 
 In this step-by-step guide, you learned how to build a Linux kernel from scratch and install the required packages.
 
