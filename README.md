@@ -1,7 +1,7 @@
 # build_linux_kernel
 Instructions/scripts on how to make linux kernel from scratch
 
-#**Step 1: Download the Source Code**
+## Step 1: Download the Source Code
 1. Visit the official kernel website and download the latest kernel version. The downloaded file contains a compressed source code.
 https://www.kernel.org/
 https://phoenixnap.com/kb/check-linux-kernel-version
@@ -16,14 +16,14 @@ The output shows the “saved” message when the download completes.
 
 Using the wget command to download the source code.
 
-#**Step 2: Extract the Source Code**
+## Step 2: Extract the Source Code
 When the file is ready, run the tar command to extract the source code:
 
 tar xvf linux-6.0.7.tar.xz
 
 The output displays the extracted kernel source code:
 
-#**Step 3: Install Required Packages**
+## Step 3: Install Required Packages
 Install additional packages before building a kernel. To do so, run this command:
 
 sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison
@@ -43,7 +43,7 @@ libelf-dev	Issues a shared library for managing ELF files (executable files, cor
 bison	Converts grammar description to a C program.
 
 
-#**Step 4: Configure Kernel**
+##Step 4: Configure Kernel
 The Linux kernel source code comes with the default configuration. However, you can adjust it to your needs. To do so, follow the steps below:
 
 1. Navigate to the linux-6.0.7 directory using the cd command:
@@ -68,7 +68,7 @@ Changing the settings in the navigation menu.
 Note: Changing settings for some options can lead to a non-functional kernel. If you are unsure what to change, leave the default settings.
 
 
-#**Step 5: Build the Kernel**
+##Step 5: Build the Kernel
 1. Start building the kernel by running the following command:
 
 make
@@ -104,7 +104,7 @@ The output shows done when finished:
 Installing the kernel.
 
 
-#**Step 6: Update the Bootloader (Optional)**
+##Step 6: Update the Bootloader (Optional)
 The GRUB bootloader is the first program that runs when the system powers on.
 
 The make install command performs this process automatically, but you can also do it manually.
