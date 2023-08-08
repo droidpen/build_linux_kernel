@@ -2,11 +2,15 @@
 Instructions/scripts on how to make linux kernel from scratch
 Ref: https://phoenixnap.com/kb/build-linux-kernel
 
+## Prerequisites
+
+- A system running Linux
+- Access to the terminal/command line
+- A user account with sudo/root privileges
+- 12GB of available space on the hard drive
+
 ## Step 1: Download the Source Code
-1. Visit the official kernel website and download the latest kernel version. The downloaded file contains a compressed source code.
-https://www.kernel.org/
-https://phoenixnap.com/kb/check-linux-kernel-version
-https://phoenixnap.com/glossary/what-is-source-code
+1. Visit the [official kernel website](https://www.kernel.org/) and download the [latest kernel version](https://phoenixnap.com/kb/check-linux-kernel-version). The downloaded file contains a compressed [source code](https://phoenixnap.com/glossary/what-is-source-code).
 
 Downloading the latest Linux kernel.
 ![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/017c26b9-769b-4b8e-a7f2-3a4cf2e8a0cd)
