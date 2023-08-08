@@ -78,80 +78,91 @@ The command launches several scripts that open the configuration menu:
 Loading the configuration menu.
 ![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/460ff163-66f3-4f21-a6f6-c1b98cd8aa27)
 
-4. The configuration menu includes options such as [firmware](https://phoenixnap.com/glossary/firmware), file system, network, and memory settings. Use the arrows to make a selection or choose Help to learn more about the options. When you finish making the changes, select Save, and then exit the menu.
+4. The configuration menu includes options such as [firmware](https://phoenixnap.com/glossary/firmware), file system, network, and memory settings. Use the arrows to make a selection or choose **Help** to learn more about the options. When you finish making the changes, select **Save**, and then exit the menu.
 
 Changing the settings in the navigation menu.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/e51d5232-50e4-4838-8395-630bc9d9efbe)
+
 Note: Changing settings for some options can lead to a non-functional kernel. If you are unsure what to change, leave the default settings.
 
 
 ##Step 5: Build the Kernel
 1. Start building the kernel by running the following command:
-
+```
 make
-
+```
 The process of building and compiling the Linux kernel takes some time to complete.
 
-The terminal lists all Linux kernel components: memory management, hardware device drivers, filesystem drivers, network drivers, and process management.
+The terminal lists all Linux kernel components: [memory management](https://phoenixnap.com/glossary/memory-management), hardware device drivers, filesystem drivers, network drivers, and process management.
 
 Building a Linux kernel with the make command.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/68b96a71-2e8d-419f-add1-659866d9a017)
+
 If you are compiling the kernel on Ubuntu, you may receive the following error that interrupts the building process:
-
+```
 No rule to make target 'debian/canonical-certs.pem
-
+```
 Disable the conflicting security certificates by executing the two commands below:
-
+```
 scripts/config --disable SYSTEM_TRUSTED_KEYS
-
+```
+```
 scripts/config --disable SYSTEM_REVOCATION_KEYS
-
+```
 The commands return no output. Start the building process again with make, and press Enter repeatedly to confirm the default options for the generation of new certificates.
 
 2. Install the required modules with this command:
-
+```
 sudo make modules_install
-
+```
 Installing kernel modules.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/1a71560d-5c35-4745-b84b-b2d044df591e)
+
 3. Finally, install the kernel by typing:
-
+```
 sudo make install 
-
-The output shows done when finished:
+```
+The output shows **done** when finished:
 
 Installing the kernel.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/7fc200e4-b12a-4127-ac78-dbd7b3ea9ba8)
 
 
 ##Step 6: Update the Bootloader (Optional)
 The GRUB bootloader is the first program that runs when the system powers on.
 
-The make install command performs this process automatically, but you can also do it manually.
+The **make install** command performs this process automatically, but you can also do it manually.
 
 1. Update the initramfs to the installed kernel version:
-
+```
 sudo update-initramfs -c -k 6.0.7
-
+```
 2. Update the GRUB bootloader with this command:
-
+```
 sudo update-grub
-
+```
 The terminal prints out the process and confirmation message:
 
 Updating the grub.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/9fc0743c-ee83-4725-9529-0f31c29bf101)
 
 
 **Step 7: Reboot and Verify Kernel Version**
 When you complete the steps above, reboot the machine.
 
-When the system boots up, verify the kernel version using the uname command:
-
+When the system boots up, verify the kernel version using the [uname](https://phoenixnap.com/kb/uname-linux) command:
+```
 uname -mrs
-
+```
 The terminal prints out the current Linux kernel version.
 
 Verify the current Linux Kernel version.
-Conclusion
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/e6011fc3-0dd7-422d-a9a2-9ee40381687e)
+
+##Conclusion
 
 In this step-by-step guide, you learned how to build a Linux kernel from scratch and install the required packages.
 
 If you follow the instructions carefully, the process will complete successfully on your Linux machine.
 
-The Linux kernel has a modular design. Functionality is extendible with modules or drivers. Learn how to use the modprobe command to add or remove modules on Linux.
+The Linux kernel has a modular design. Functionality is extendible with modules or drivers. Learn how to use the [modprobe command](https://phoenixnap.com/kb/modprobe-command) to add or remove modules on Linux.
