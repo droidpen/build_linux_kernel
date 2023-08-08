@@ -8,6 +8,8 @@ https://phoenixnap.com/kb/check-linux-kernel-version
 https://phoenixnap.com/glossary/what-is-source-code
 
 Downloading the latest Linux kernel.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/017c26b9-769b-4b8e-a7f2-3a4cf2e8a0cd)
+
 2. Open the terminal and use the wget command to download the Linux kernel source code:
 
 ```
@@ -17,6 +19,7 @@ wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.0.7.tar.xz
 The output shows the “saved” message when the download completes.
 
 Using the wget command to download the source code.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/2e87ab75-72fb-4fde-ba7b-39c5ac5e3f46)
 
 ## Step 2: Extract the Source Code
 When the file is ready, run the tar command to extract the source code:
@@ -26,25 +29,30 @@ tar xvf linux-6.0.7.tar.xz
 ```
 
 The output displays the extracted kernel source code:
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/6eeaad4b-a963-4dbc-9b9a-1bb2cf78511f)
 
 ## Step 3: Install Required Packages
 Install additional packages before building a kernel. To do so, run this command:
 
+```
 sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison
+```
 
 The command we used above installs the following packages:
 
-Package	Package description
-git  Tracks and makes a record of all changes during development in the source code. It also allows reverting the changes.
-fakeroot  Creates the fake root environment.
-build-essential  Installs development tools such as C, C++, gcc, and g++.
-ncurses-dev	Provides API for the text-based terminals.
-xz-utils	Provides fast file compression and decompression.
-libssl-dev	Supports SSL and TSL that encrypt data and make the internet connection secure.
-bc (Basic Calculator)	Supports the interactive execution of statements.
-flex (Fast Lexical Analyzer Generator)	Generates lexical analyzers that convert characters into tokens.
-libelf-dev	Issues a shared library for managing ELF files (executable files, core dumps and object code)
-bison	Converts grammar description to a C program.
+| Package |	Package description |
+| --- | --- |
+| git | Tracks and makes a record of all changes during development in the source code. It also allows reverting the changes. |
+| fakeroot | Creates the fake root environment.
+| build-essential | Installs development tools such as C, C++, gcc, and g++.
+| ncurses-dev | Provides API for the text-based terminals.
+| xz-utils | Provides fast file compression and decompression.
+| libssl-dev | Supports SSL and TSL that encrypt data and make the internet connection secure.
+| bc (Basic Calculator) | Supports the interactive execution of statements.
+| flex (Fast Lexical Analyzer Generator) | Generates lexical analyzers that convert characters into tokens.
+| libelf-dev | Issues a shared library for managing ELF files (executable files, core dumps and object code)
+| bison | Converts grammar description to a C program.
+
 
 
 ##Step 4: Configure Kernel
