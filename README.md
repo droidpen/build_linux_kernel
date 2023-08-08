@@ -10,7 +10,9 @@ https://phoenixnap.com/glossary/what-is-source-code
 Downloading the latest Linux kernel.
 2. Open the terminal and use the wget command to download the Linux kernel source code:
 
+```
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.0.7.tar.xz
+```
 
 The output shows the “saved” message when the download completes.
 
