@@ -53,6 +53,7 @@ The command we used above installs the following packages:
 | libelf-dev | Issues a shared library for managing ELF files (executable files, core dumps and object code)
 | bison | Converts grammar description to a C program.
 
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/73528796-b304-49dd-9c8d-877031747578)
 
 
 ##Step 4: Configure Kernel
@@ -63,18 +64,21 @@ The Linux kernel source code comes with the default configuration. However, you 
 cd linux-6.0.7
 ```
 2. Copy the existing configuration file using the cp command:
-
+```
 cp -v /boot/config-$(uname -r) .config
-
+```
 Navigating to the kernel folder and copying configuration file.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/8c2d29e7-5eb4-4374-b450-e7d3180dde14)
+
 3. To make changes to the configuration file, run the make command:
-
+```
 make menuconfig
-
+```
 The command launches several scripts that open the configuration menu:
-
 Loading the configuration menu.
-4. The configuration menu includes options such as firmware, file system, network, and memory settings. Use the arrows to make a selection or choose Help to learn more about the options. When you finish making the changes, select Save, and then exit the menu.
+![image](https://github.com/droidpen/build_linux_kernel/assets/54828368/460ff163-66f3-4f21-a6f6-c1b98cd8aa27)
+
+4. The configuration menu includes options such as [firmware](https://phoenixnap.com/glossary/firmware), file system, network, and memory settings. Use the arrows to make a selection or choose Help to learn more about the options. When you finish making the changes, select Save, and then exit the menu.
 
 Changing the settings in the navigation menu.
 Note: Changing settings for some options can lead to a non-functional kernel. If you are unsure what to change, leave the default settings.
