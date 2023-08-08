@@ -59,9 +59,9 @@ The command we used above installs the following packages:
 The Linux kernel source code comes with the default configuration. However, you can adjust it to your needs. To do so, follow the steps below:
 
 1. Navigate to the linux-6.0.7 directory using the cd command:
-
+```
 cd linux-6.0.7
-
+```
 2. Copy the existing configuration file using the cp command:
 
 cp -v /boot/config-$(uname -r) .config
