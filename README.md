@@ -21,7 +21,7 @@ Using the wget command to download the source code.
 ## Step 2: Extract the Source Code
 When the file is ready, run the tar command to extract the source code:
 
-tar xvf linux-6.0.7.tar.xz
+```tar xvf linux-6.0.7.tar.xz```
 
 The output displays the extracted kernel source code:
 
